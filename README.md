@@ -13,8 +13,11 @@ Note important poin example :
 
 3. Boxplot is used to understand the distribution of a numerical variable and detect outliers. It shows the median, spread of data (IQR), and unusual values. When comparing groups, such as tax vs price, it helps compare price distributions across different tax categories
 
-4. from sklearn.model_selection import train_test_split X_train, X_test , y_train, y_test = train_test_split(one_hot_encode, y, test_size=0.20, random_state=42)
+4. from sklearn.model_selection import train_test_split
+    X_train, X_test
+   ,y_train, y_test = train_test_split(one_hot_encode, y, test_size=0.20, random_state=42)
 
+when to use
   When do we use train_test_split()?
   
   Machine Learning model train karne se pehle dataset ko do parts me divide karne ke liye use karte hain:
@@ -30,4 +33,14 @@ Note important poin example :
   Model 800 rows se learn karega.
   200 unseen rows par test hoga.
   Parameters
+
+**train_test_split() is used to divide the dataset into training and testing sets. The training set is used to train the model, while the testing set is used to evaluate how well the model performs on unseen      data and to check for overfitting.
+
+  5 from sklearn.linear_model import LinearRegression
+    model = LinearRegression()
+    model.fit(X_train,y_train) -> 80% train data
+
+    Linear Regression model ko train karne ke liye use hota hai.
+
+    LinearRegression() is used to create a linear regression model, and fit(X_train, y_train) trains the model using the training data. During training, the model learns the relationship between input features     and the target variable so it can make predictions on new data.
   
